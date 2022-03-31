@@ -1,0 +1,22 @@
+public class Bank {
+    private BankAccount accounts[];
+    private static int lastAssignedNo=0;
+    public void setAccounts(BankAccount[] accounts) {
+        this.accounts = accounts;
+    }
+
+    public BankAccount[] getAccounts() {
+        return accounts;
+    }
+        public static void main(String[] args) {
+        Bank sbi=new Bank();
+        BankAccount[] account=new BankAccount[3];
+        account[0]=new BankAccount(String.valueOf(++lastAssignedNo),"rishi",67893.4);
+        account[1]=new BankAccount(String.valueOf(++lastAssignedNo),"rahul",60993.4);
+        account[2]=new BankAccount(String.valueOf(++lastAssignedNo),"sita",632693.4);
+        sbi.setAccounts(account);
+        BankAccount[] bank1=sbi.getAccounts();
+        for(BankAccount bk:bank1)
+            System.out.println("Account Name - " +bk.getAccountName()+ "\n Account Number - "+bk.getAccountNo()+ "\n Account Balance - "+bk.getBalance());
+    }
+}
