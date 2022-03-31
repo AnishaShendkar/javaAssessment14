@@ -1,0 +1,31 @@
+public class BankAccount {
+    private String accountNo;
+    private String accountName;
+    private double balance;
+    // constructor with default value
+    public BankAccount()
+    {
+        accountName="Sidhharth";
+        accountNo="645790456";
+        balance=1000;
+    }
+    // constructor to intilialize with accountno and account name
+    public BankAccount(String accountNo, String accountName) {
+        this.accountNo = accountNo;
+        this.accountName = accountName;
+        balance=1000;
+    }
+    public static void main(String[] args) {
+        BankAccount ba=new BankAccount();
+        System.out.println("After default constructor execution  --- ");
+        System.out.println("Account Name  = " +ba.accountName + "\n Account Number - "+ ba.accountNo + "\n Balance = "+ba.balance);
+        BankAccount b=new BankAccount("12054823","Prayag");
+        System.out.println("After Parameterized Overloaded constructor execution  --- ");
+        System.out.println("Account Name  = " +b.accountName + "\n Account Number - "+ b.accountNo + "\nBalance = "+b.balance);
+    }
+}
+public BankAccount(String accountNo,String accountName, double balance) {
+        this.accountName = accountName;
+        this.balance = balance;
+        this.accountNo=accountNo;
+    }
